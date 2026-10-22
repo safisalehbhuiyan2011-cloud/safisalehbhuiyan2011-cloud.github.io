@@ -1,254 +1,1705 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#020617" />
-  <meta
-    name="description"
-    content="Aagun Labs — Deep-tech product studio architecting high-demand digital products, enterprise software engines, SaaS systems, and secure web blueprints."
-  />
-  <meta name="author" content="Safi Saleh Bhuiyan — Aagun Labs" />
-  <title>Aagun Labs — Digital Products & Enterprise Software Engines</title>
+  <meta name="theme-color" content="#080809" />
+  <meta name="description" content="Aagun Labs is an independent AI product studio exploring intelligent business systems, revenue automation, SaaS products, and custom software." />
+  <title>Aagun Labs — Intelligence Into Infrastructure</title>
 
-  <!-- Premium typography -->
-  <link rel="preconnect" href="https://googleapis.com" />
-  <link rel="preconnect" href="https://gstatic.com" crossorigin />
-  <link
-    href="https://googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Embedded Premium Font Styles -->
-  <style>
-    @font-face {
-      font-family: 'DM Mono';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://gstatic.com/s/dmmono/v16/aFTU7PB1QTsUX8KYhh0.ttf) format('truetype');
-    }
-    @font-face {
-      font-family: 'DM Mono';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://gstatic.com/s/dmmono/v16/aFTR7PB1QTsUX8KYvumzIYQ.ttf) format('truetype');
-    }
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
-    }
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf) format('truetype');
-    }
-    @font-face {
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf) format('truetype');
-    }
-    @font-face {
-      font-family: 'Space Grotesk';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj42Vksj.ttf) format('truetype');
-    }
-  </style>
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <script>
     tailwind.config = {
-      darkMode: "class",
       theme: {
         extend: {
           fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            display: ["Space Grotesk", "sans-serif"],
-            mono: ["DM Mono", "monospace"],
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['DM Mono', 'monospace']
           },
           colors: {
-            radium: "#00ff7f",
-            voltage: "#00f2fe",
-            flame: "#f97316",
-            neonpink: "#ff2bd6",
+            ember: '#ff3b30',
+            fire: '#ff5b35',
+            ash: '#a1a1aa',
+            void: '#080809'
           },
           boxShadow: {
-            neon: "0 0 25px rgba(0,255,127,.25), 0 0 70px rgba(0,242,254,.14)",
-            cyan: "0 0 25px rgba(0,242,254,.28), 0 0 80px rgba(0,242,254,.12)",
-          },
-          animation: {
-            float: "float 8s ease-in-out infinite",
-            breathe: "breathe 6s ease-in-out infinite",
-          },
-          keyframes: {
-            float: {
-              "0%, 100%": { transform: "translate3d(0,0,0)" },
-              "50%": { transform: "translate3d(0,-20px,0)" },
-            },
-            breathe: {
-              "0%, 100%": { opacity: ".32", transform: "scale(.94)" },
-              "50%": { opacity: ".72", transform: "scale(1.08)" },
-            }
+            fire: '0 0 35px rgba(255,59,48,.22)',
+            glass: '0 25px 80px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.09)'
           }
         }
       }
     };
   </script>
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com"></script>
-
   <style>
     :root {
-      color-scheme: dark;
-      --bg: #020617;
-      --text: #f8fafc;
-      --panel: rgba(7, 14, 28, 0.68);
-      --border: rgba(255, 255, 255, 0.1);
-      --grid: rgba(148, 163, 184, 0.065);
+      --bg: #080809;
+      --surface: rgba(20,20,23,.77);
+      --surface-strong: rgba(25,25,29,.94);
+      --line: rgba(255,255,255,.105);
+      --text: #f5f5f5;
+      --muted: #a1a1aa;
+      --red: #ff3b30;
+      --ember: #ff7547;
     }
+
+    * { box-sizing: border-box; }
+
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 100px;
       background: var(--bg);
     }
+
     body {
       margin: 0;
-      min-height: 100vh;
-      overflow-x: hidden;
-      background: radial-gradient(circle at 15% 10%, rgba(0, 255, 127, 0.055), transparent 25%), var(--bg);
+      background: var(--bg);
       color: var(--text);
+      font-family: Inter, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: .17;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+    }
+
+    a { -webkit-tap-highlight-color: transparent; }
+    button, input, textarea { font: inherit; }
+
+    ::selection {
+      background: rgba(255,59,48,.35);
+      color: white;
+    }
+
+    .site-grid {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: .23;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, black, transparent 86%);
+    }
+
+    .ambient {
+      position: fixed;
+      z-index: 0;
+      pointer-events: none;
+      border-radius: 9999px;
+      filter: blur(105px);
+      opacity: .16;
+      transform: translateZ(0);
+      animation: breathe 12s ease-in-out infinite alternate;
+    }
+
+    .ambient-one {
+      width: 420px;
+      height: 420px;
+      background: #ff2419;
+      top: 2%;
+      left: -180px;
+    }
+
+    .ambient-two {
+      width: 490px;
+      height: 490px;
+      background: #5a1118;
+      top: 32%;
+      right: -260px;
+      animation-delay: -4s;
+    }
+
+    .ambient-three {
+      width: 370px;
+      height: 370px;
+      background: #9a452b;
+      top: 76%;
+      left: 18%;
+      opacity: .09;
+      animation-delay: -7s;
+    }
+
+    @keyframes breathe {
+      from { transform: translate3d(0,0,0) scale(.9); }
+      to { transform: translate3d(50px,-35px,0) scale(1.17); }
+    }
+
+    .page-shell {
+      position: relative;
+      z-index: 2;
+    }
+
     .glass {
       position: relative;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025) 38%);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.065), transparent 38%),
+        linear-gradient(160deg, rgba(24,24,28,.91), rgba(10,10,12,.84));
+      border: 1px solid var(--line);
+      box-shadow:
+        0 30px 90px rgba(0,0,0,.34),
+        0 8px 24px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.10),
+        inset 0 -1px 0 rgba(0,0,0,.7);
+      backdrop-filter: blur(28px) saturate(140%);
+      -webkit-backdrop-filter: blur(28px) saturate(140%);
     }
-    .glass-thick {
-      background: var(--panel);
+
+    .glass::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(255,255,255,.12), transparent 35%),
+        linear-gradient(120deg, transparent 24%, rgba(255,255,255,.025) 42%, transparent 57%);
+    }
+
+    .glass::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 8%;
+      width: 36%;
+      height: 1px;
+      pointer-events: none;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.62), transparent);
+      opacity: .65;
+    }
+
+    .glass-soft {
+      background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(16,16,19,.74));
+      border: 1px solid rgba(255,255,255,.085);
+      box-shadow:
+        0 18px 55px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.08),
+        inset 0 -20px 45px rgba(0,0,0,.15);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }
+
+    .red-border {
+      border: 1px solid transparent;
+      background:
+        linear-gradient(145deg, rgba(23,20,21,.97), rgba(10,10,12,.98)) padding-box,
+        linear-gradient(135deg, rgba(255,83,62,.88), rgba(255,255,255,.12) 36%, rgba(255,59,48,.24) 75%, rgba(255,255,255,.12)) border-box;
+      box-shadow:
+        0 30px 85px rgba(0,0,0,.42),
+        0 0 55px rgba(255,59,48,.075),
+        inset 0 1px 0 rgba(255,255,255,.12);
+    }
+
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(110deg, #fff 4%, #d4d4d8 32%, #ff9181 61%, #ff3b30 88%, #ffd0c8);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .muted-gradient-text {
+      color: transparent;
+      background: linear-gradient(110deg, #f4f4f5, #a1a1aa 45%, #ff8c79);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .eyebrow {
+      font-family: "DM Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: 10px;
+      color: #ff8a7c;
+    }
+
+    .section-heading {
+      font-family: "Space Grotesk", sans-serif;
+      letter-spacing: -.055em;
+      line-height: 1.04;
+    }
+
+    .status-dot {
+      position: relative;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: #ff5b4d;
+      box-shadow: 0 0 10px #ff3b30, 0 0 24px rgba(255,59,48,.75);
+    }
+
+    .status-dot::after {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border: 1px solid rgba(255,82,67,.5);
+      border-radius: inherit;
+      animation: ping 2.1s ease-out infinite;
+    }
+
+    @keyframes ping {
+      0% { transform: scale(.55); opacity: .9; }
+      100% { transform: scale(1.8); opacity: 0; }
+    }
+
+    .btn-primary, .btn-secondary {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      border-radius: 13px;
+      padding: 13px 19px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: transform .13s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+      cursor: pointer;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-primary {
+      color: #fff;
+      border: 1px solid rgba(255,132,118,.75);
+      background: linear-gradient(115deg, #ff4539, #d91f25 58%, #a91624);
+      box-shadow: 0 8px 26px rgba(255,43,42,.20), inset 0 1px 0 rgba(255,255,255,.3);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 12px 35px rgba(255,43,42,.38), 0 0 40px rgba(255,43,42,.16);
+      transform: translateY(-2px);
+    }
+
+    .btn-primary:active, .btn-secondary:active {
+      transform: scale(.95);
+      box-shadow: 0 0 48px rgba(255,59,48,.48);
+    }
+
+    .btn-secondary {
+      color: #f4f4f5;
+      border: 1px solid rgba(255,255,255,.15);
+      background: linear-gradient(140deg, rgba(255,255,255,.075), rgba(255,255,255,.018));
+      box-shadow: 0 8px 25px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.07);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,95,79,.45);
+      background: rgba(255,59,48,.07);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.3), 0 0 28px rgba(255,59,48,.09);
+    }
+
+    .nav-link {
+      color: #a1a1aa;
+      transition: color .2s ease;
+    }
+
+    .nav-link:hover { color: white; }
+
+    .hero-orb {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 34% 26%, rgba(255,169,151,.76), rgba(255,59,48,.3) 20%, rgba(120,15,25,.28) 48%, transparent 70%);
+      filter: blur(1px);
+      box-shadow: inset -22px -25px 65px rgba(0,0,0,.45), 0 0 100px rgba(255,59,48,.11);
+      animation: orb-float 9s ease-in-out infinite alternate;
+    }
+
+    .hero-orb::after {
+      content: "";
+      position: absolute;
+      inset: 8%;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.17);
+      box-shadow: inset 0 0 30px rgba(255,255,255,.06);
+    }
+
+    @keyframes orb-float {
+      from { transform: translateY(-8px) rotate(-8deg); }
+      to { transform: translateY(16px) rotate(8deg); }
+    }
+
+    .orbit {
+      position: absolute;
+      width: 390px;
+      height: 170px;
+      border: 1px solid rgba(255,119,103,.23);
+      border-radius: 50%;
+      transform: rotate(-28deg);
+      box-shadow: 0 0 18px rgba(255,59,48,.04);
+      pointer-events: none;
+    }
+
+    .orbit-two {
+      width: 420px;
+      height: 210px;
+      transform: rotate(35deg);
+      border-color: rgba(255,255,255,.1);
+    }
+
+    .orbit-point {
+      position: absolute;
+      top: 18%;
+      left: 15%;
+      width: 7px;
+      height: 7px;
+      background: #ff7567;
+      border-radius: 50%;
+      box-shadow: 0 0 18px #ff3b30;
+    }
+
+    .hero-visual {
+      perspective: 1100px;
+      transform-style: preserve-3d;
+    }
+
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform .22s ease, border-color .25s ease, box-shadow .25s ease;
+      will-change: transform;
+    }
+
+    .tilt-card:hover {
+      border-color: rgba(255,104,88,.34);
+      box-shadow: 0 35px 100px rgba(0,0,0,.48), 0 0 35px rgba(255,59,48,.07), inset 0 1px 0 rgba(255,255,255,.12);
+    }
+
+    .float-slow { animation: float-slow 7s ease-in-out infinite; }
+    .float-late { animation: float-slow 8s ease-in-out -3s infinite; }
+
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .mini-bar {
+      height: 4px;
+      border-radius: 99px;
+      background: rgba(255,255,255,.08);
+      overflow: hidden;
+    }
+
+    .mini-bar > span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #b91c1c, #ff705c);
+      box-shadow: 0 0 14px rgba(255,59,48,.42);
+    }
+
+    .icon-box {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.018));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 10px 20px rgba(0,0,0,.2);
+    }
+
+    .feature-line {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,59,48,.5), rgba(255,255,255,.06), transparent);
+    }
+
+    .product-visual {
+      position: relative;
+      min-height: 145px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.085);
+      border-radius: 16px;
+      background:
+        radial-gradient(ellipse at 75% 0%, rgba(255,59,48,.16), transparent 45%),
+        linear-gradient(145deg, rgba(255,255,255,.055), rgba(0,0,0,.18));
+    }
+
+    .product-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(115deg, transparent 15%, rgba(255,255,255,.045) 40%, transparent 57%);
+    }
+
+    .window-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.28);
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #a1a1aa;
+      font-size: 12px;
+      transition: color .2s ease, transform .2s ease, border-color .2s ease;
+    }
+
+    .social-link:hover {
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .social-icon {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      border: 1px solid rgba(255,255,255,.11);
+      background: rgba(255,255,255,.035);
+      transition: background .2s ease, border-color .2s ease;
+    }
+
+    .social-link:hover .social-icon {
+      border-color: rgba(255,91,76,.45);
+      background: rgba(255,59,48,.1);
+    }
+
+    .form-field {
+      width: 100%;
+      color: #f4f4f5;
+      background: rgba(0,0,0,.24);
+      border: 1px solid rgba(255,255,255,.11);
+      border-radius: 12px;
+      padding: 13px 14px;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .form-field::placeholder { color: #71717a; }
+
+    .form-field:focus {
+      border-color: rgba(255,91,76,.68);
+      box-shadow: 0 0 0 3px rgba(255,59,48,.09);
+      background: rgba(0,0,0,.34);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .75s ease, transform .75s cubic-bezier(.2,.75,.25,1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .light-streak {
+      position: absolute;
+      width: 1px;
+      height: 180px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,.25), transparent);
+      transform: rotate(32deg);
+      filter: blur(.3px);
+      pointer-events: none;
+    }
+
+    .corner-mark {
+      position: absolute;
+      right: 17px;
+      bottom: 17px;
+      width: 14px;
+      height: 14px;
+      border-right: 1px solid rgba(255,255,255,.3);
+      border-bottom: 1px solid rgba(255,255,255,.3);
+      opacity: .6;
+    }
+
+    .scroll-indicator {
+      writing-mode: vertical-rl;
+      letter-spacing: .22em;
+    }
+
+    .footer-rule {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+    }
+
+    .burst {
+      position: fixed;
+      z-index: 100;
+      pointer-events: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ff6b5b;
+      box-shadow: 0 0 22px 12px rgba(255,59,48,.36), 0 0 80px 30px rgba(255,59,48,.14);
+      animation: burst .42s ease-out forwards;
+    }
+
+    @keyframes burst {
+      from { transform: scale(.25); opacity: .9; }
+      to { transform: scale(8); opacity: 0; }
+    }
+
+    @media (max-width: 768px) {
+      .ambient { filter: blur(80px); opacity: .12; }
+      .hero-orb { width: 210px; height: 210px; }
+      .orbit { width: 270px; height: 130px; }
+      .orbit-two { width: 300px; height: 150px; }
+      .tilt-card { transform: none !important; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
-<body>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-4 pt-6 sm:px-6 lg:px-8">
-    <!-- NAVIGATION -->
-    <header class="w-full z-50 mb-12">
-      <nav class="glass rounded-2xl px-6 py-4 flex items-center justify-between shadow-sm">
-        <div class="flex items-center gap-2.5">
-          <div class="relative flex h-3 w-3">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-radium opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-radium"></span>
+<body>
+  <div class="site-grid" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="ambient ambient-three" aria-hidden="true"></div>
+
+  <div class="page-shell">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 pt-3">
+      <nav class="glass mx-auto flex max-w-7xl items-center justify-between rounded-2xl px-4 sm:px-6 py-3"
+           aria-label="Main navigation">
+        <a href="#home" class="flex items-center gap-3" aria-label="Aagun Labs home">
+          <div class="relative grid h-9 w-9 place-items-center overflow-hidden rounded-xl border border-red-300/30 bg-gradient-to-br from-red-500/25 via-red-950 to-black shadow-[0_0_24px_rgba(255,59,48,.18)]">
+            <svg viewBox="0 0 32 32" class="h-6 w-6" fill="none" aria-hidden="true">
+              <path d="M17.7 3.5 7.3 17.2h7.1l-1.9 11.3 12.2-15.1h-7.4l2.4-9.9Z" fill="url(#markGradient)"/>
+              <defs>
+                <linearGradient id="markGradient" x1="8" y1="5" x2="25" y2="28" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#fff"/>
+                  <stop offset=".45" stop-color="#ff786a"/>
+                  <stop offset="1" stop-color="#ff3029"/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-          <span class="font-display font-bold tracking-tight text-lg text-white">Aagun Labs</span>
+          <div>
+            <div class="font-display text-sm font-bold tracking-[.17em] text-white">AAGUN LABS</div>
+            <div class="font-mono text-[9px] tracking-[.13em] text-zinc-500">INTELLIGENCE / INFRASTRUCTURE</div>
+          </div>
+        </a>
+
+        <div class="hidden items-center gap-7 text-xs font-medium lg:flex">
+          <a class="nav-link" href="#studio">Studio</a>
+          <a class="nav-link" href="#systems">Systems</a>
+          <a class="nav-link" href="#vault">Product concepts</a>
+          <a class="nav-link" href="#founder">Founder</a>
         </div>
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#portfolio" class="hover:text-white transition">Portfolio</a>
-          <a href="#contact" class="hover:text-white transition">Contact</a>
+
+        <div class="flex items-center gap-3">
+          <div class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[.035] px-3 py-2 sm:flex">
+            <span class="status-dot"></span>
+            <span class="font-mono text-[9px] uppercase tracking-[.12em] text-zinc-300">Studio online</span>
+          </div>
+          <a href="#contact" class="btn-primary !min-h-0 !rounded-xl !px-3.5 !py-2.5 text-[11px]">
+            Let's talk <span aria-hidden="true">↗</span>
+          </a>
+          <button id="menu-toggle" class="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[.04] text-zinc-200 lg:hidden"
+                  aria-label="Open navigation menu" aria-expanded="false">
+            <svg id="menu-icon" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+            </svg>
+          </button>
         </div>
       </nav>
-    </header>
 
-    <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <!-- PORTFOLIO LEFT COLUMN -->
-      <div class="lg:col-span-2 space-y-6">
-        <div class="mb-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-radium/20 bg-radium/5 text-radium text-xs font-medium mb-4">
-            <span class="w-1 h-1 rounded-full bg-radium animate-pulse"></span>
-            Product Architecture Ledger
-          </div>
-          <h1 class="text-4xl sm:text-5xl font-display font-extrabold tracking-tight text-white mb-4">
-            Forging high-performance <span class="bg-gradient-to-r from-radium via-voltage to-cyan-400 bg-clip-text text-transparent">digital engines</span>.
-          </h1>
-          <p class="text-slate-400 text-base leading-relaxed">
-            Deep-tech product architecture blueprints and high-conversion landing assets engineered by Safi Saleh Bhuiyan.
-          </p>
-        </div>
-
-        <div class="glass rounded-3xl p-6 relative overflow-hidden group">
-          <h3 class="text-xl font-display font-bold text-white mb-2">Apex Dashboard Blueprint</h3>
-          <p class="text-slate-400 text-sm mb-4">A high-fidelity administrative panel dashboard framework with reactive localized caching networks.</p>
+      <div id="mobile-menu" class="glass mx-auto mt-2 hidden max-w-7xl rounded-2xl p-4 lg:hidden">
+        <div class="grid gap-1 text-sm">
+          <a class="rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-white" href="#studio">Studio</a>
+          <a class="rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-white" href="#systems">Systems</a>
+          <a class="rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-white" href="#vault">Product concepts</a>
+          <a class="rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-white" href="#founder">Founder</a>
+          <a class="rounded-xl px-4 py-3 text-zinc-300 hover:bg-white/5 hover:text-white" href="#contact">Contact</a>
         </div>
       </div>
+    </header>
 
-      <!-- PROFILE SIDEBAR RIGHT COLUMN -->
-      <div class="space-y-8">
-        <aside class="glass glass-thick rounded-3xl p-6 shadow-xl relative">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="h-12 w-12 rounded-2xl border border-white/10 bg-white/[0.04] flex items-center justify-center p-2">
-              <i data-lucide="terminal" class="h-6 w-6 text-radium"></i>
+    <main>
+      <!-- Hero -->
+      <section id="home" class="relative overflow-hidden px-5 pb-20 pt-36 sm:px-8 sm:pb-28 sm:pt-44 lg:pt-48">
+        <div class="pointer-events-none absolute left-[48%] top-36 hidden h-[550px] w-[550px] -translate-x-1/2 lg:block">
+          <div class="hero-orb left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+          <div class="orbit left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <span class="orbit-point"></span>
+          </div>
+          <div class="orbit orbit-two left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+
+        <div class="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.08fr_.92fr] lg:gap-8">
+          <div class="relative z-10">
+            <div class="mb-7 inline-flex items-center gap-2.5 rounded-full border border-red-400/20 bg-red-500/[.055] px-3.5 py-2">
+              <span class="status-dot"></span>
+              <span class="font-mono text-[9px] uppercase tracking-[.17em] text-zinc-300">Independent AI product studio</span>
+              <span class="text-red-300">✳</span>
             </div>
-            <div>
-              <h2 class="text-lg font-display font-bold text-white">Safi Saleh Bhuiyan</h2>
-              <p class="text-xs text-slate-400 font-mono">Lead Architect, Aagun Labs</p>
+
+            <h1 class="section-heading max-w-4xl text-5xl font-bold sm:text-6xl md:text-7xl xl:text-[86px]">
+              Intelligence<br>
+              into <span class="gradient-text">infrastructure.</span>
+            </h1>
+
+            <p class="mt-7 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg sm:leading-8">
+              We explore and engineer AI-powered business tools, revenue systems, SaaS concepts, and custom software built around real operational problems.
+            </p>
+
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#vault" class="btn-primary">
+                Explore product concepts
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                Initiate a conversation
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3 text-[11px] text-zinc-500">
+              <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-red-400"></span> AI-assisted engineering</span>
+              <span class="hidden h-3 w-px bg-white/10 sm:block"></span>
+              <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-zinc-400"></span> Systems thinking</span>
+              <span class="hidden h-3 w-px bg-white/10 sm:block"></span>
+              <span class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-orange-300"></span> Global digital products</span>
             </div>
           </div>
 
-          <p class="text-slate-400 text-xs leading-relaxed mb-6">
-            Deploying resilient frontend engines and high-conversion visual design frameworks for early-stage deep-tech ventures and global product hubs.
-          </p>
+          <!-- Floating 3D interface -->
+          <div class="hero-visual relative mx-auto w-full max-w-[510px] lg:ml-auto">
+            <div class="absolute -inset-10 rounded-full bg-red-600/[.07] blur-[80px]" aria-hidden="true"></div>
 
-          <div class="my-7 h-px bg-white/[0.07]"></div>
+            <div class="glass tilt-card float-slow relative z-10 rounded-[26px] p-4 sm:p-5"
+                 data-tilt data-tilt-max="4">
+              <div class="flex items-center justify-between border-b border-white/[.09] pb-4">
+                <div class="flex items-center gap-2.5">
+                  <div class="grid h-8 w-8 place-items-center rounded-xl border border-red-400/20 bg-red-500/10 text-red-300">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7">
+                      <path d="M12 3 4.5 7.2v9.6L12 21l7.5-4.2V7.2L12 3Z" stroke-linejoin="round"/>
+                      <path d="m8 12 2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs font-semibold text-zinc-100">Aagun / System Overview</div>
+                    <div class="mt-1 font-mono text-[9px] text-zinc-500">CONCEPTUAL INTERFACE</div>
+                  </div>
+                </div>
+                <span class="rounded-full border border-red-400/20 bg-red-400/[.07] px-2.5 py-1 font-mono text-[9px] text-red-300">LIVE DESIGN</span>
+              </div>
 
-          <div>
-            <div class="mb-4 font-mono text-[8px] uppercase tracking-[0.25em] text-slate-600">
-              Bangladesh Voice Grid Anchor
+              <div class="mt-5 grid grid-cols-2 gap-3">
+                <div class="glass-soft rounded-2xl p-4">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] text-zinc-500">Intelligence layer</span>
+                    <span class="text-red-300">✳</span>
+                  </div>
+                  <div class="mt-3 text-lg font-semibold tracking-tight">AI-native</div>
+                  <div class="mt-1 text-[10px] text-zinc-500">Assistive workflows</div>
+                  <div class="mt-4 mini-bar"><span style="width:78%"></span></div>
+                </div>
+                <div class="glass-soft rounded-2xl p-4">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] text-zinc-500">System design</span>
+                    <span class="text-zinc-300">◈</span>
+                  </div>
+                  <div class="mt-3 text-lg font-semibold tracking-tight">Modular</div>
+                  <div class="mt-1 text-[10px] text-zinc-500">Built for iteration</div>
+                  <div class="mt-4 mini-bar"><span style="width:88%;background:linear-gradient(90deg,#777,#ddd)"></span></div>
+                </div>
+              </div>
+
+              <div class="glass-soft mt-3 rounded-2xl p-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="text-xs font-semibold">Business automation pipeline</div>
+                    <div class="mt-1 text-[10px] text-zinc-500">A conceptual workflow architecture</div>
+                  </div>
+                  <span class="font-mono text-[9px] text-zinc-500">FLOW / 01</span>
+                </div>
+
+                <div class="mt-5 grid grid-cols-3 gap-2">
+                  <div class="rounded-xl border border-white/10 bg-black/25 p-3 text-center">
+                    <div class="mx-auto grid h-8 w-8 place-items-center rounded-lg bg-white/[.06] text-zinc-300">
+                      <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M4 5h16v14H4zM8 9h8M8 13h5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div class="mt-2 text-[9px] font-medium text-zinc-300">Capture</div>
+                  </div>
+                  <div class="relative rounded-xl border border-red-400/20 bg-red-500/[.07] p-3 text-center">
+                    <div class="absolute -left-2 top-1/2 h-px w-2 bg-red-400/60"></div>
+                    <div class="absolute -right-2 top-1/2 h-px w-2 bg-red-400/60"></div>
+                    <div class="mx-auto grid h-8 w-8 place-items-center rounded-lg bg-red-500/10 text-red-300">
+                      <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M12 3v3m0 12v3M3 12h3m12 0h3M6 6l2 2m8 8 2 2M18 6l-2 2m-8 8-2 2" stroke-linecap="round"/>
+                        <circle cx="12" cy="12" r="4"/>
+                      </svg>
+                    </div>
+                    <div class="mt-2 text-[9px] font-medium text-red-200">Reason</div>
+                  </div>
+                  <div class="rounded-xl border border-white/10 bg-black/25 p-3 text-center">
+                    <div class="mx-auto grid h-8 w-8 place-items-center rounded-lg bg-white/[.06] text-zinc-300">
+                      <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="m5 12 4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div class="mt-2 text-[9px] font-medium text-zinc-300">Execute</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 flex items-center justify-between rounded-xl border border-white/[.07] bg-black/20 px-3.5 py-3">
+                <div class="flex items-center gap-2">
+                  <span class="status-dot"></span>
+                  <span class="text-[10px] text-zinc-400">Exploring the next useful system</span>
+                </div>
+                <span class="font-mono text-[9px] text-zinc-600">AAGUN.LAB</span>
+              </div>
             </div>
-            
-            <div class="space-y-3">
-              <!-- Mobile links successfully removed from this container -->
-            </div>
-          </div>
 
-          <div class="mt-7 rounded-2xl border border-radium/10 bg-gradient-to-br from-radium/[0.055] via-cyan-300/[0.025] to-transparent p-5">
-            <div class="flex gap-3">
-              <i data-lucide="sparkles" class="mt-0.5 h-4 w-4 shrink-0 text-radium"></i>
-              <div>
-                <p class="text-xs font-semibold text-white">
-                  Architecture transmission ready.
-                </p>
-                <p class="mt-2 text-xs leading-5 text-slate-500">
-                  For the fastest route, use the form or contact Aagun Labs directly through one of the channels above.
-                </p>
+            <div class="glass-soft float-late absolute -right-3 top-14 z-20 hidden rounded-2xl px-4 py-3 sm:block md:-right-7">
+              <div class="flex items-center gap-3">
+                <div class="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[.05] text-red-300">✳</div>
+                <div>
+                  <div class="text-[11px] font-semibold">AI + Automation</div>
+                  <div class="mt-1 text-[9px] text-zinc-500">From idea to workflow</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-soft float-slow absolute -bottom-7 -left-3 z-20 hidden rounded-2xl px-4 py-3 sm:block md:-left-8">
+              <div class="flex items-center gap-3">
+                <div class="grid h-9 w-9 place-items-center rounded-xl border border-red-400/20 bg-red-500/10 text-red-300">↗</div>
+                <div>
+                  <div class="text-[11px] font-semibold">Product-first thinking</div>
+                  <div class="mt-1 text-[9px] text-zinc-500">Solve a real problem</div>
+                </div>
               </div>
             </div>
           </div>
-        </aside>
-      </div>
+        </div>
+
+        <div class="mx-auto mt-24 hidden max-w-7xl items-center justify-between border-t border-white/[.08] pt-5 md:flex">
+          <span class="font-mono text-[9px] uppercase tracking-[.17em] text-zinc-600">A small studio. A systems mindset.</span>
+          <span class="font-mono text-[9px] uppercase tracking-[.17em] text-zinc-600">Bangladesh · Working globally</span>
+          <a href="#studio" class="scroll-indicator font-mono text-[9px] uppercase text-zinc-500">Scroll to explore ↓</a>
+        </div>
+      </section>
+
+      <!-- Studio -->
+      <section id="studio" class="px-5 py-20 sm:px-8 sm:py-28">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal grid gap-10 lg:grid-cols-[.78fr_1.22fr] lg:gap-20">
+            <div>
+              <div class="eyebrow mb-5">01 / The studio</div>
+              <h2 class="section-heading text-4xl font-semibold sm:text-5xl">
+                Less noise.<br>
+                <span class="muted-gradient-text">More systems.</span>
+              </h2>
+            </div>
+
+            <div class="max-w-3xl">
+              <p class="text-lg leading-8 text-zinc-300 sm:text-xl sm:leading-9">
+                Aagun Labs is being shaped around a simple idea: useful software should remove friction, not add another layer of it.
+              </p>
+              <p class="mt-5 text-sm leading-7 text-zinc-500 sm:text-base sm:leading-8">
+                We focus on finding specific business problems, designing clear solutions, and using modern development tools and AI to prototype, validate, and build practical digital products. The goal is not software for its own sake. It is a better workflow, a clearer process, or a useful product that can stand on its own.
+              </p>
+
+              <div class="mt-8 grid gap-3 sm:grid-cols-3">
+                <div class="glass-soft rounded-2xl p-4">
+                  <div class="eyebrow">Principle 01</div>
+                  <div class="mt-3 text-sm font-semibold text-zinc-100">Problem before product</div>
+                  <p class="mt-2 text-xs leading-5 text-zinc-500">Start with a real friction point and a clear user.</p>
+                </div>
+                <div class="glass-soft rounded-2xl p-4">
+                  <div class="eyebrow">Principle 02</div>
+                  <div class="mt-3 text-sm font-semibold text-zinc-100">Proof before promises</div>
+                  <p class="mt-2 text-xs leading-5 text-zinc-500">Show the workflow, test the value, then make the claim.</p>
+                </div>
+                <div class="glass-soft rounded-2xl p-4">
+                  <div class="eyebrow">Principle 03</div>
+                  <div class="mt-3 text-sm font-semibold text-zinc-100">Systems over shortcuts</div>
+                  <p class="mt-2 text-xs leading-5 text-zinc-500">Build with clarity, maintainability, and trust in mind.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal mt-16 grid gap-4 sm:grid-cols-3">
+            <div class="glass tilt-card rounded-2xl p-6" data-tilt data-tilt-max="3">
+              <div class="flex items-center justify-between">
+                <div class="icon-box text-red-300">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="4" width="18" height="16" rx="2"/>
+                    <path d="M3 9h18M8 9v11" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <span class="font-mono text-[9px] text-zinc-600">LAYER / 01</span>
+              </div>
+              <h3 class="mt-6 font-display text-xl font-semibold">Product design</h3>
+              <p class="mt-3 text-sm leading-6 text-zinc-500">Turn a messy idea into a defined product, a clear user journey, and a focused first version.</p>
+            </div>
+
+            <div class="glass tilt-card rounded-2xl p-6" data-tilt data-tilt-max="3">
+              <div class="flex items-center justify-between">
+                <div class="icon-box text-red-300">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z" stroke-linejoin="round"/>
+                    <path d="m8 12 2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="font-mono text-[9px] text-zinc-600">LAYER / 02</span>
+              </div>
+              <h3 class="mt-6 font-display text-xl font-semibold">AI-assisted engineering</h3>
+              <p class="mt-3 text-sm leading-6 text-zinc-500">Use AI thoughtfully alongside modern development practices to accelerate prototyping and implementation.</p>
+            </div>
+
+            <div class="glass tilt-card rounded-2xl p-6" data-tilt data-tilt-max="3">
+              <div class="flex items-center justify-between">
+                <div class="icon-box text-red-300">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 17.5 9 12l3.5 3.5L20 7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 7h5v5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="font-mono text-[9px] text-zinc-600">LAYER / 03</span>
+              </div>
+              <h3 class="mt-6 font-display text-xl font-semibold">Commercial thinking</h3>
+              <p class="mt-3 text-sm leading-6 text-zinc-500">Connect the software to a concrete use case, a buyer's needs, and a realistic path to value.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Founder -->
+      <section id="founder" class="px-5 py-20 sm:px-8 sm:py-28">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-10 flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <div class="eyebrow mb-5">02 / The founder's lab</div>
+              <h2 class="section-heading text-4xl font-semibold sm:text-5xl">Built with intent.</h2>
+            </div>
+            <p class="max-w-md text-sm leading-6 text-zinc-500">
+              A founder-led studio focused on learning fast, building carefully, and earning trust through visible work.
+            </p>
+          </div>
+
+          <div class="reveal red-border relative overflow-hidden rounded-[30px] p-5 sm:p-8 lg:p-10">
+            <div class="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-red-600/[.13] blur-[85px]"></div>
+            <div class="pointer-events-none absolute bottom-0 left-1/3 h-40 w-72 rounded-full bg-zinc-300/[.04] blur-[65px]"></div>
+
+            <div class="relative grid items-center gap-10 lg:grid-cols-[.82fr_1.18fr] lg:gap-14">
+              <div class="relative">
+                <div class="glass relative mx-auto max-w-sm rounded-[26px] p-5 sm:p-6">
+                  <div class="absolute right-5 top-5 flex items-center gap-2">
+                    <span class="status-dot"></span>
+                    <span class="font-mono text-[9px] uppercase tracking-[.15em] text-zinc-500">Founder-led</span>
+                  </div>
+
+                  <div class="relative mt-8 flex aspect-[4/4.3] items-center justify-center overflow-hidden rounded-[20px] border border-white/10 bg-gradient-to-br from-zinc-800/70 via-[#181214] to-black">
+                    <div class="absolute inset-0" style="background:radial-gradient(ellipse at 50% 40%,rgba(255,59,48,.18),transparent 56%),linear-gradient(135deg,transparent 25%,rgba(255,255,255,.045) 48%,transparent 65%)"></div>
+                    <div class="absolute inset-5 rounded-[16px] border border-white/[.07]"></div>
+                    <div class="absolute inset-8 rounded-[12px] border border-red-300/[.12]"></div>
+
+                    <div class="relative text-center">
+                      <div class="mx-auto grid h-28 w-28 place-items-center rounded-[30px] border border-red-300/30 bg-gradient-to-br from-red-400/20 via-red-950/70 to-black shadow-[0_0_65px_rgba(255,59,48,.15),inset_0_1px_0_rgba(255,255,255,.18)] sm:h-32 sm:w-32">
+                        <svg viewBox="0 0 100 100" class="h-20 w-20 sm:h-24 sm:w-24" fill="none" aria-label="Aagun Labs emblem">
+                          <path d="M53 7 23 48h21l-6 45 40-53H54l-1-33Z" fill="url(#founderMark)" stroke="rgba(255,255,255,.6)" stroke-width=".7"/>
+                          <path d="M53 7 23 48h21l-6 45 40-53H54l-1-33Z" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+                          <defs>
+                            <linearGradient id="founderMark" x1="30" y1="8" x2="75" y2="92" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#fff"/>
+                              <stop offset=".45" stop-color="#ff8c7b"/>
+                              <stop offset="1" stop-color="#e51f29"/>
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div class="mt-6 font-mono text-[9px] uppercase tracking-[.28em] text-zinc-500">Founder / Studio Identity</div>
+                      <div class="mt-2 font-display text-lg font-bold tracking-[.12em] text-white">AAGUN LABS</div>
+                    </div>
+
+                    <span class="absolute left-5 top-5 h-3 w-3 border-l border-t border-red-300/60"></span>
+                    <span class="absolute right-5 top-5 h-3 w-3 border-r border-t border-red-300/60"></span>
+                    <span class="absolute bottom-5 left-5 h-3 w-3 border-b border-l border-red-300/60"></span>
+                    <span class="absolute bottom-5 right-5 h-3 w-3 border-b border-r border-red-300/60"></span>
+                  </div>
+
+                  <div class="mt-5 flex items-center justify-between gap-4">
+                    <div>
+                      <div class="text-[10px] uppercase tracking-[.15em] text-zinc-500">Principal contact</div>
+                      <div class="mt-1 text-sm font-semibold text-zinc-100">Safi Saleh Bhuiyan</div>
+                    </div>
+                    <div class="rounded-xl border border-white/10 bg-white/[.04] px-3 py-2 text-right">
+                      <div class="font-mono text-[8px] text-zinc-500">STUDIO</div>
+                      <div class="mt-1 font-mono text-[10px] text-red-300">A / 001</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mx-auto mt-4 flex max-w-sm items-center justify-center gap-2 text-[10px] text-zinc-600">
+                  <span class="h-px w-8 bg-gradient-to-r from-transparent to-red-400/50"></span>
+                  INDEPENDENT BY DESIGN
+                  <span class="h-px w-8 bg-gradient-to-l from-transparent to-red-400/50"></span>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div class="eyebrow">Founder & CEO / Studio Lead</div>
+                <h3 class="section-heading mt-4 text-4xl font-bold sm:text-5xl lg:text-6xl">
+                  Safi Saleh<br><span class="gradient-text">Bhuiyan.</span>
+                </h3>
+
+                <div class="mt-5 inline-flex items-center gap-2 rounded-full border border-red-300/20 bg-red-500/[.06] px-3.5 py-2">
+                  <svg viewBox="0 0 24 24" class="h-4 w-4 text-red-300" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="m12 3 2.5 5.1 5.6.8-4.1 4 .97 5.6L12 15.9l-5 2.6.97-5.6-4.1-4 5.6-.8L12 3Z" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="text-[10px] font-semibold uppercase tracking-[.13em] text-zinc-200">Founder & CEO · Principal Engineer</span>
+                </div>
+
+                <p class="mt-7 max-w-2xl text-base leading-8 text-zinc-300">
+                  Building Aagun Labs around a belief that ambitious ideas become more valuable when they are translated into focused, usable systems.
+                </p>
+                <p class="mt-4 max-w-2xl text-sm leading-7 text-zinc-500">
+                  The direction is practical: investigate a business problem, design a small but useful solution, prototype with modern AI and development tools, test the experience, and improve it based on evidence. The aim is to replace fragmented workflows with clearer software—not to make promises before the work exists.
+                </p>
+
+                <div class="mt-8 grid gap-3 sm:grid-cols-2">
+                  <div class="glass-soft rounded-2xl p-4">
+                    <div class="flex items-center gap-3">
+                      <div class="icon-box text-red-300">⌘</div>
+                      <div>
+                        <div class="text-xs font-semibold">Product architecture</div>
+                        <div class="mt-1 text-[10px] text-zinc-500">Structure before complexity</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="glass-soft rounded-2xl p-4">
+                    <div class="flex items-center gap-3">
+                      <div class="icon-box text-zinc-300">◇</div>
+                      <div>
+                        <div class="text-xs font-semibold">Trust-first execution</div>
+                        <div class="mt-1 text-[10px] text-zinc-500">Clear scope, honest progress</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-3">
+                  <a href="mailto:safisalehbhuiyan2011@gmail.com?subject=Aagun%20Labs%20-%20Project%20Inquiry" class="btn-primary">
+                    Contact the founder <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="#systems" class="btn-secondary">Explore our approach</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Operating principles dashboard -->
+      <section class="px-5 py-16 sm:px-8 sm:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal glass rounded-[28px] p-6 sm:p-8 lg:p-10">
+            <div class="flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <div class="eyebrow mb-4">03 / Operating philosophy</div>
+                <h2 class="section-heading text-3xl font-semibold sm:text-4xl">Measure what matters.</h2>
+              </div>
+              <p class="max-w-md text-xs leading-6 text-zinc-500">
+                No inflated performance claims. Our public standard is to make the work, scope, and current status easy to understand.
+              </p>
+            </div>
+
+            <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <div class="glass-soft rounded-2xl p-5">
+                <div class="font-display text-3xl font-bold text-white">01<span class="text-red-400">.</span></div>
+                <div class="mt-3 text-sm font-semibold">Problem clarity</div>
+                <p class="mt-2 text-xs leading-5 text-zinc-500">Define who the product helps and what friction it removes.</p>
+              </div>
+              <div class="glass-soft rounded-2xl p-5">
+                <div class="font-display text-3xl font-bold text-white">02<span class="text-red-400">.</span></div>
+                <div class="mt-3 text-sm font-semibold">Useful prototype</div>
+                <p class="mt-2 text-xs leading-5 text-zinc-500">Demonstrate the core workflow before adding unnecessary features.</p>
+              </div>
+              <div class="glass-soft rounded-2xl p-5">
+                <div class="font-display text-3xl font-bold text-white">03<span class="text-red-400">.</span></div>
+                <div class="mt-3 text-sm font-semibold">Real validation</div>
+                <p class="mt-2 text-xs leading-5 text-zinc-500">Seek feedback and evidence instead of assuming demand.</p>
+              </div>
+              <div class="glass-soft rounded-2xl p-5">
+                <div class="font-display text-3xl font-bold text-white">04<span class="text-red-400">.</span></div>
+                <div class="mt-3 text-sm font-semibold">Transparent delivery</div>
+                <p class="mt-2 text-xs leading-5 text-zinc-500">Set clear expectations, communicate progress, and state limitations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core systems -->
+      <section id="systems" class="px-5 py-20 sm:px-8 sm:py-28">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <div class="eyebrow mb-5">04 / Core system machinery</div>
+              <h2 class="section-heading max-w-3xl text-4xl font-semibold sm:text-5xl">
+                Three layers.<br><span class="muted-gradient-text">One coherent system.</span>
+              </h2>
+            </div>
+            <p class="max-w-md text-sm leading-7 text-zinc-500">
+              A practical architecture mindset spanning the user experience, application logic, and the foundations needed to run software.
+            </p>
+          </div>
+
+          <div class="grid gap-4 lg:grid-cols-3">
+            <article class="reveal glass tilt-card group rounded-[25px] p-6 sm:p-7" data-tilt data-tilt-max="4">
+              <div class="flex items-center justify-between">
+                <div class="icon-box text-red-300">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="4" width="18" height="16" rx="2"/>
+                    <path d="M3 9h18M8 9v11M7 6.5h.01M10 6.5h.01" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <span class="font-mono text-[9px] tracking-[.14em] text-zinc-600">LAYER 01</span>
+              </div>
+              <h3 class="mt-7 font-display text-2xl font-semibold">Frontend Engine</h3>
+              <p class="mt-3 text-sm leading-7 text-zinc-500">Fast, responsive interfaces that make complex workflows feel simple and intentional.</p>
+              <div class="feature-line mt-6"></div>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-400">Responsive UI</span>
+                <span class="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-400">Design systems</span>
+                <span class="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-400">Interactions</span>
+              </div>
+              <div class="mt-7 flex items-center justify-between text-[10px] text-zinc-600">
+                <span>Experience layer</span><span class="text-red-300 transition-transform group-hover:translate-x-1">↗</span>
+              </div>
+            </article>
+
+            <article class="reveal glass tilt-card group rounded-[25px] p-6 sm:p-7" data-tilt data-tilt-max="4">
+              <div class="flex items-center justify-between">
+                <div class="icon-box text-red-300">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <ellipse cx="12" cy="5" rx="8" ry="3"/>
+                    <path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="font-mono text-[9px] tracking-[.14em] text-zinc-600">LAYER 02</span>
+              </div>
+              <h3 class="mt-7 font-display text-2xl font-semibold">Backend & Logic</h3>
+              <p class="mt-3 text-sm leading-7 text-zinc-500">The data models, business rules, integrations, and automation that give an interface real purpose.</p>
+              <div class="feature-line mt-6"></div>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-400">APIs</span>
+                <span class="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-400">AI workflows</span>
+                <span class="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-400">Data logic</span>
+              </div>
+              <div class="mt-7 flex items-center justify-between text-[10px] text-zinc-600">
+                <span>Intelligence layer</span><span class="text-red-300 transition-transform group-hover:translate-x-1">↗</span>
+              </div>
+            </article>
+
+            <article class="reveal glass tilt-card group rounded-[25px] p-6 sm:p-7" data-tilt data-tilt-max="4">
+              <div class="flex items-center justify-between">
+                <div class="icon-box text-red-300">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z" stroke-linejoin="round"/>
+                    <path d="m8 12 2.5 2.5L16 9" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="font-mono text-[9px] tracking-[.14em] text-zinc-600">LAYER 03</span>
+              </div>
+              <h3 class="mt-7 font-display text-2xl font-semibold">Cloud & Delivery</h3>
+              <p class="mt-3 text-sm leading-7 text-zinc-500">Deployment, environment configuration, testing, and practical safeguards for dependable delivery.</p>
+              <div class="feature-line mt-6"></div>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-400">Deployment</span>
+                <span class="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-400">Testing</span>
+                <span class="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-400">Documentation</span>
+              </div>
+              <div class="mt-7 flex items-center justify-between text-[10px] text-zinc-600">
+                <span>Operations layer</span><span class="text-red-300 transition-transform group-hover:translate-x-1">↗</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product vault -->
+      <section id="vault" class="px-5 py-20 sm:px-8 sm:py-28">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <div class="eyebrow mb-5">05 / Digital product vault</div>
+              <h2 class="section-heading text-4xl font-semibold sm:text-5xl">Ideas with a job to do.</h2>
+            </div>
+            <p class="max-w-md text-sm leading-7 text-zinc-500">
+              A focused set of product directions inspired by real business needs. These concepts are presented as explorations, not claims of completed or production-ready software.
+            </p>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-3">
+            <!-- Product 1 -->
+            <article class="reveal glass tilt-card rounded-[25px] p-4 sm:p-5" data-tilt data-tilt-max="3">
+              <div class="product-visual p-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-1.5"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span></div>
+                  <span class="font-mono text-[8px] tracking-[.12em] text-zinc-500">NEXUS / CONCEPT</span>
+                </div>
+                <div class="mt-5 grid grid-cols-[.7fr_1.3fr] gap-3">
+                  <div class="space-y-2">
+                    <div class="h-6 rounded-md border border-white/10 bg-white/[.035]"></div>
+                    <div class="h-6 rounded-md border border-white/10 bg-white/[.035]"></div>
+                    <div class="h-6 rounded-md border border-white/10 bg-red-500/[.12]"></div>
+                    <div class="h-6 rounded-md border border-white/10 bg-white/[.035]"></div>
+                  </div>
+                  <div class="rounded-xl border border-white/10 bg-black/20 p-3">
+                    <div class="text-[9px] text-zinc-500">Business overview</div>
+                    <div class="mt-2 h-4 w-2/3 rounded bg-white/10"></div>
+                    <div class="mt-4 flex items-end gap-1.5">
+                      <span class="h-7 w-3 rounded-t bg-red-500/30"></span>
+                      <span class="h-10 w-3 rounded-t bg-red-500/50"></span>
+                      <span class="h-6 w-3 rounded-t bg-red-500/30"></span>
+                      <span class="h-12 w-3 rounded-t bg-red-500/70"></span>
+                      <span class="h-8 w-3 rounded-t bg-red-500/40"></span>
+                      <span class="h-14 w-3 rounded-t bg-red-400/70"></span>
+                      <span class="h-9 w-3 rounded-t bg-red-500/40"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <span class="rounded-full border border-red-400/20 bg-red-500/[.07] px-2.5 py-1 font-mono text-[9px] text-red-300">PRODUCT CONCEPT</span>
+                <span class="rounded-full border border-white/10 px-2.5 py-1 font-mono text-[9px] text-zinc-500">ERP / OPERATIONS</span>
+              </div>
+              <h3 class="mt-4 font-display text-xl font-semibold">Aagun NexusCore</h3>
+              <p class="mt-3 min-h-[72px] text-sm leading-6 text-zinc-500">
+                An exploration of a unified business workspace for organizing operations, records, tasks, and decision-making in one clearer interface.
+              </p>
+              <div class="mt-5 border-t border-white/[.08] pt-4">
+                <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-zinc-200 transition-colors hover:text-red-300">
+                  Discuss the concept <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="reveal glass tilt-card rounded-[25px] p-4 sm:p-5" data-tilt data-tilt-max="3">
+              <div class="product-visual p-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-1.5"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span></div>
+                  <span class="font-mono text-[8px] tracking-[.12em] text-zinc-500">FLOWSCALE / CONCEPT</span>
+                </div>
+                <div class="mt-5 space-y-3">
+                  <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-black/20 p-3">
+                    <div class="grid h-8 w-8 place-items-center rounded-lg bg-red-500/10 text-red-300">↗</div>
+                    <div class="flex-1"><div class="h-2 w-24 rounded bg-white/20"></div><div class="mt-2 h-1.5 w-16 rounded bg-white/10"></div></div>
+                    <div class="h-5 w-12 rounded-md border border-red-400/20 bg-red-500/[.08]"></div>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-black/20 p-3">
+                    <div class="grid h-8 w-8 place-items-center rounded-lg bg-white/[.06] text-zinc-300">◎</div>
+                    <div class="flex-1"><div class="h-2 w-20 rounded bg-white/20"></div><div class="mt-2 h-1.5 w-28 rounded bg-white/10"></div></div>
+                    <div class="h-5 w-12 rounded-md border border-white/10 bg-white/[.04]"></div>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-xl border border-white/10 bg-black/20 p-3">
+                    <div class="grid h-8 w-8 place-items-center rounded-lg bg-orange-400/10 text-orange-200">⌁</div>
+                    <div class="flex-1"><div class="h-2 w-28 rounded bg-white/20"></div><div class="mt-2 h-1.5 w-16 rounded bg-white/10"></div></div>
+                    <div class="h-5 w-12 rounded-md border border-white/10 bg-white/[.04]"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <span class="rounded-full border border-orange-300/20 bg-orange-400/[.07] px-2.5 py-1 font-mono text-[9px] text-orange-200">WORKFLOW CONCEPT</span>
+                <span class="rounded-full border border-white/10 px-2.5 py-1 font-mono text-[9px] text-zinc-500">LEADS / FOLLOW-UP</span>
+              </div>
+              <h3 class="mt-4 font-display text-xl font-semibold">FlowScale Revenue Systems</h3>
+              <p class="mt-3 min-h-[72px] text-sm leading-6 text-zinc-500">
+                A proposed lead-recovery and follow-up workflow to help businesses organize incoming enquiries, prioritize responses, and reduce avoidable missed opportunities.
+              </p>
+              <div class="mt-5 border-t border-white/[.08] pt-4">
+                <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-zinc-200 transition-colors hover:text-red-300">
+                  Discuss the concept <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="reveal glass tilt-card rounded-[25px] p-4 sm:p-5" data-tilt data-tilt-max="3">
+              <div class="product-visual p-4">
+                <div class="flex items-center justify-between">
+                  <div class="flex gap-1.5"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span></div>
+                  <span class="font-mono text-[8px] tracking-[.12em] text-zinc-500">OMNIAI / CONCEPT</span>
+                </div>
+                <div class="relative mt-4 flex h-[105px] items-center justify-center">
+                  <div class="absolute h-24 w-24 rounded-full border border-red-400/20 shadow-[0_0_35px_rgba(255,59,48,.09)]"></div>
+                  <div class="absolute h-16 w-16 rounded-full border border-white/15"></div>
+                  <div class="absolute h-32 w-32 rounded-full border border-dashed border-white/10"></div>
+                  <div class="relative z-10 grid h-12 w-12 place-items-center rounded-2xl border border-red-300/30 bg-gradient-to-br from-red-400/20 to-black text-red-200 shadow-[0_0_28px_rgba(255,59,48,.16)]">✳</div>
+                  <span class="absolute left-[20%] top-[15%] h-2 w-2 rounded-full bg-red-400 shadow-[0_0_12px_#ff3b30]"></span>
+                  <span class="absolute right-[18%] bottom-[20%] h-1.5 w-1.5 rounded-full bg-zinc-300"></span>
+                  <span class="absolute right-[25%] top-[10%] h-1 w-1 rounded-full bg-orange-300"></span>
+                </div>
+                <div class="mt-1 flex justify-center gap-2">
+                  <span class="rounded-full border border-white/10 bg-black/20 px-2 py-1 font-mono text-[8px] text-zinc-500">INPUT</span>
+                  <span class="rounded-full border border-white/10 bg-black/20 px-2 py-1 font-mono text-[8px] text-zinc-500">REASONING</span>
+                  <span class="rounded-full border border-white/10 bg-black/20 px-2 py-1 font-mono text-[8px] text-zinc-500">OUTPUT</span>
+                </div>
+              </div>
+
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <span class="rounded-full border border-white/15 bg-white/[.04] px-2.5 py-1 font-mono text-[9px] text-zinc-300">RESEARCH DIRECTION</span>
+                <span class="rounded-full border border-white/10 px-2.5 py-1 font-mono text-[9px] text-zinc-500">AI / INTEGRATION</span>
+              </div>
+              <h3 class="mt-4 font-display text-xl font-semibold">OmniAI Systems Core</h3>
+              <p class="mt-3 min-h-[72px] text-sm leading-6 text-zinc-500">
+                A proposed hub for connecting AI-assisted workflows, reusable prompts, and task-specific tools into more coherent business processes.
+              </p>
+              <div class="mt-5 border-t border-white/[.08] pt-4">
+                <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold text-zinc-200 transition-colors hover:text-red-300">
+                  Discuss the concept <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="reveal mt-6 flex flex-col items-start justify-between gap-4 rounded-2xl border border-white/[.08] bg-white/[.02] px-5 py-4 sm:flex-row sm:items-center">
+            <div class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-orange-300"></span>
+              <p class="max-w-3xl text-xs leading-6 text-zinc-500">
+                Product status: the names and interface previews above communicate potential directions. Availability, features, integrations, pricing, and production status must be confirmed separately.
+              </p>
+            </div>
+            <a href="#contact" class="flex-shrink-0 text-xs font-semibold text-zinc-300 transition-colors hover:text-red-300">Propose a use case ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- How we work -->
+      <section class="px-5 py-20 sm:px-8 sm:py-28">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-12">
+            <div class="eyebrow mb-5">06 / The execution protocol</div>
+            <h2 class="section-heading max-w-3xl text-4xl font-semibold sm:text-5xl">From business friction<br>to a working solution.</h2>
+          </div>
+
+          <div class="reveal glass overflow-hidden rounded-[26px] p-5 sm:p-8">
+            <div class="grid gap-0 md:grid-cols-4">
+              <div class="relative border-b border-white/[.08] pb-6 pt-3 md:border-b-0 md:border-r md:pb-3 md:pr-6">
+                <div class="font-mono text-[10px] text-red-300">STEP / 01</div>
+                <div class="mt-5 text-lg font-semibold">Discover</div>
+                <p class="mt-3 text-xs leading-6 text-zinc-500">Understand the user, the current process, the bottleneck, and the intended result.</p>
+                <div class="mt-6 hidden font-mono text-[9px] text-zinc-700 md:block">DEFINE THE PROBLEM →</div>
+              </div>
+              <div class="relative border-b border-white/[.08] py-6 md:border-b-0 md:border-r md:px-6 md:py-3">
+                <div class="font-mono text-[10px] text-red-300">STEP / 02</div>
+                <div class="mt-5 text-lg font-semibold">Architect</div>
+                <p class="mt-3 text-xs leading-6 text-zinc-500">Design the smallest useful system, the user journey, and the technical approach.</p>
+                <div class="mt-6 hidden font-mono text-[9px] text-zinc-700 md:block">DESIGN THE SOLUTION →</div>
+              </div>
+              <div class="relative border-b border-white/[.08] py-6 md:border-b-0 md:border-r md:px-6 md:py-3">
+                <div class="font-mono text-[10px] text-red-300">STEP / 03</div>
+                <div class="mt-5 text-lg font-semibold">Prototype</div>
+                <p class="mt-3 text-xs leading-6 text-zinc-500">Build a demonstrable version, test the critical path, and expose limitations early.</p>
+                <div class="mt-6 hidden font-mono text-[9px] text-zinc-700 md:block">MAKE IT TANGIBLE →</div>
+              </div>
+              <div class="relative py-6 md:pl-6 md:py-3">
+                <div class="font-mono text-[10px] text-red-300">STEP / 04</div>
+                <div class="mt-5 text-lg font-semibold">Validate & refine</div>
+                <p class="mt-3 text-xs leading-6 text-zinc-500">Use feedback and agreed criteria to decide what should improve or ship next.</p>
+                <div class="mt-6 hidden font-mono text-[9px] text-zinc-700 md:block">IMPROVE WITH EVIDENCE ↗</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal mt-5 grid gap-4 md:grid-cols-2">
+            <div class="glass-soft rounded-2xl p-5 sm:p-6">
+              <div class="eyebrow">Direction A / Client work</div>
+              <h3 class="mt-3 text-lg font-semibold">Purpose-built digital solutions</h3>
+              <p class="mt-3 text-sm leading-6 text-zinc-500">Explore a defined business need and agree on scope, deliverables, ownership, cost, and timing before development begins.</p>
+            </div>
+            <div class="glass-soft rounded-2xl p-5 sm:p-6">
+              <div class="eyebrow">Direction B / Product studio</div>
+              <h3 class="mt-3 text-lg font-semibold">Reusable tools & software concepts</h3>
+              <p class="mt-3 text-sm leading-6 text-zinc-500">Investigate repeatable problems and turn the strongest opportunities into focused prototypes that can be tested with potential users.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="px-5 py-20 sm:px-8 sm:py-28">
+        <div class="mx-auto max-w-7xl">
+          <div class="reveal mb-12">
+            <div class="eyebrow mb-5">07 / Architecture transmission</div>
+            <h2 class="section-heading text-4xl font-semibold sm:text-5xl lg:text-6xl">
+              Have a real problem?<br><span class="gradient-text">Let's architect a solution.</span>
+            </h2>
+            <p class="mt-5 max-w-2xl text-sm leading-7 text-zinc-500 sm:text-base">
+              Tell us what you are trying to improve, what your current process looks like, and what a useful result would mean for you.
+            </p>
+          </div>
+
+          <div class="reveal grid gap-5 lg:grid-cols-[1.05fr_.95fr]">
+            <div class="glass rounded-[26px] p-5 sm:p-8">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <div class="font-display text-xl font-semibold">Project transmission</div>
+                  <p class="mt-1 text-xs text-zinc-500">Share a few details to start the conversation.</p>
+                </div>
+                <div class="icon-box text-red-300">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 5h16v14H4z" stroke-linejoin="round"/>
+                    <path d="m4 7 8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <form id="contact-form" class="mt-7 space-y-4">
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label for="name" class="mb-2 block text-[11px] font-medium text-zinc-400">Your name</label>
+                    <input class="form-field" id="name" name="name" autocomplete="name" placeholder="Name or company" required>
+                  </div>
+                  <div>
+                    <label for="email" class="mb-2 block text-[11px] font-medium text-zinc-400">Your email</label>
+                    <input class="form-field" id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="project-type" class="mb-2 block text-[11px] font-medium text-zinc-400">What are you exploring?</label>
+                  <select class="form-field" id="project-type" name="project-type" required>
+                    <option value="" selected disabled>Select a direction</option>
+                    <option>AI-powered business tool</option>
+                    <option>Lead recovery and follow-up system</option>
+                    <option>Website or custom software</option>
+                    <option>SaaS product concept</option>
+                    <option>Business workflow automation</option>
+                    <option>Other / still exploring</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="budget" class="mb-2 block text-[11px] font-medium text-zinc-400">Project scope (optional)</label>
+                  <select class="form-field" id="budget" name="budget">
+                    <option value="" selected>Prefer to discuss</option>
+                    <option>Early research / prototype</option>
+                    <option>Small, defined project</option>
+                    <option>Ongoing product development</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" class="mb-2 block text-[11px] font-medium text-zinc-400">The problem to solve</label>
+                  <textarea class="form-field min-h-[125px] resize-y" id="message" name="message" placeholder="What is happening today, and what would you like to improve?" required></textarea>
+                </div>
+
+                <button class="btn-primary w-full" type="submit">
+                  Prepare project email
+                  <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <p class="text-[10px] leading-5 text-zinc-600">
+                  This form prepares an email in your default email application. It does not send information to a server or store submissions on this website.
+                </p>
+                <p id="form-status" class="hidden rounded-xl border border-red-300/20 bg-red-500/[.06] p-3 text-xs leading-5 text-red-200" role="status"></p>
+              </form>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div class="glass red-border flex-1 rounded-[26px] p-5 sm:p-7">
+                <div class="eyebrow">Direct correspondence</div>
+                <h3 class="mt-4 font-display text-2xl font-semibold">Reach Aagun Labs.</h3>
+                <p class="mt-3 text-sm leading-6 text-zinc-500">Choose the channel that works best for your enquiry.</p>
+
+                <div class="mt-7 space-y-3">
+                  <a href="mailto:safisalehbhuiyan2011@gmail.com" class="group flex items-center gap-4 rounded-2xl border border-white/[.09] bg-black/20 p-4 transition-colors hover:border-red-400/30 hover:bg-red-500/[.045]">
+                    <div class="icon-box flex-shrink-0 text-red-300">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="m4 7 8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[10px] text-zinc-500">Primary communication</div>
+                      <div class="mt-1 break-all text-xs font-medium text-zinc-200 sm:text-sm">safisalehbhuiyan2011@gmail.com</div>
+                    </div>
+                    <span class="text-zinc-600 transition-colors group-hover:text-red-300">↗</span>
+                  </a>
+
+                  <a href="mailto:bearsloth2011@gmail.com" class="group flex items-center gap-4 rounded-2xl border border-white/[.09] bg-black/20 p-4 transition-colors hover:border-red-400/30 hover:bg-red-500/[.045]">
+                    <div class="icon-box flex-shrink-0 text-zinc-300">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z" stroke-linejoin="round"/>
+                        <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[10px] text-zinc-500">Infrastructure & technical enquiries</div>
+                      <div class="mt-1 break-all text-xs font-medium text-zinc-200 sm:text-sm">bearsloth2011@gmail.com</div>
+                    </div>
+                    <span class="text-zinc-600 transition-colors group-hover:text-red-300">↗</span>
+                  </a>
+                </div>
+
+                <div class="mt-8 border-t border-white/[.09] pt-6">
+                  <div class="font-mono text-[9px] uppercase tracking-[.15em] text-zinc-500">Social channels / @aagunlabs</div>
+                  <div class="mt-4 flex flex-wrap gap-3">
+                    <a class="social-link" href="https://x.com/aagunlabs" target="_blank" rel="noopener noreferrer" aria-label="Aagun Labs on X">
+                      <span class="social-icon">
+                        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+                          <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.6 22H2.4l7.3-8.4L1.8 2h6.4l4.4 6.9L18.9 2Zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20Z"/>
+                        </svg>
+                      </span>
+                      <span>X</span><span aria-hidden="true">↗</span>
+                    </a>
+                    <a class="social-link" href="https://youtube.com/@aagunlabs" target="_blank" rel="noopener noreferrer" aria-label="Aagun Labs on YouTube">
+                      <span class="social-icon">
+                        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+                          <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.7V8.3l6.3 3.7-6.3 3.7Z"/>
+                        </svg>
+                      </span>
+                      <span>YouTube</span><span aria-hidden="true">↗</span>
+                    </a>
+                    <a class="social-link" href="https://instagram.com/aagunlabs" target="_blank" rel="noopener noreferrer" aria-label="Aagun Labs on Instagram">
+                      <span class="social-icon">
+                        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7">
+                          <rect x="3" y="3" width="18" height="18" rx="5"/>
+                          <circle cx="12" cy="12" r="4"/>
+                          <circle cx="17.5" cy="6.8" r=".8" fill="currentColor" stroke="none"/>
+                        </svg>
+                      </span>
+                      <span>Instagram</span><span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glass-soft rounded-[24px] p-5 sm:p-6">
+                <div class="flex items-start gap-4">
+                  <div class="icon-box flex-shrink-0 text-red-300">
+                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z"/>
+                      <circle cx="12" cy="10" r="2.5"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold">Bangladesh · Remote-first</div>
+                    <p class="mt-2 text-xs leading-6 text-zinc-500">Based in Bangladesh and exploring opportunities to build useful digital products for businesses and users across borders.</p>
+                    <div class="mt-3 font-mono text-[9px] uppercase tracking-[.12em] text-zinc-600">Correspondence by email & social channels</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- FINAL CTA -->
-    <section class="relative pb-24 pt-12 text-center">
-      <div class="glass glass-thick relative overflow-hidden rounded-[2rem] px-6 py-14">
-        <div class="relative">
-          <div class="mx-auto mb-5 flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5">
-            <span class="h-1.5 w-1.5 rounded-full bg-radium"></span>
-            <span class="font-mono text-[8px] uppercase tracking-[0.25em] text-slate-500">Aagun Labs / Ready</span>
+    <!-- Footer -->
+    <footer class="px-5 pb-8 pt-4 sm:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="footer-rule"></div>
+        <div class="flex flex-col justify-between gap-7 py-8 md:flex-row md:items-center">
+          <a href="#home" class="flex items-center gap-3">
+            <div class="grid h-9 w-9 place-items-center rounded-xl border border-red-300/25 bg-gradient-to-br from-red-500/20 to-black text-red-300">✳</div>
+            <div>
+              <div class="font-display text-sm font-bold tracking-[.17em]">AAGUN LABS</div>
+              <div class="mt-1 font-mono text-[9px] tracking-[.12em] text-zinc-600">INTELLIGENCE INTO INFRASTRUCTURE</div>
+            </div>
+          </a>
+
+          <div class="flex flex-wrap gap-x-5 gap-y-3 text-xs text-zinc-500">
+            <a href="#studio" class="transition-colors hover:text-white">Studio</a>
+            <a href="#systems" class="transition-colors hover:text-white">Systems</a>
+            <a href="#vault" class="transition-colors hover:text-white">Product concepts</a>
+            <a href="#founder" class="transition-colors hover:text-white">Founder</a>
+            <a href="#contact" class="transition-colors hover:text-white">Contact</a>
           </div>
-          <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">
-            Let's scale your system's interface layer.
-          </h2>
+
+          <div class="flex items-center gap-3">
+            <a href="https://x.com/aagunlabs" target="_blank" rel="noopener noreferrer" aria-label="X profile" class="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[.03] text-zinc-400 transition hover:border-red-400/30 hover:text-white">𝕏</a>
+            <a href="https://youtube.com/@aagunlabs" target="_blank" rel="noopener noreferrer" aria-label="YouTube profile" class="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[.03] text-zinc-400 transition hover:border-red-400/30 hover:text-white">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.7V8.3l6.3 3.7-6.3 3.7Z"/></svg>
+            </a>
+            <a href="https://instagram.com/aagunlabs" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile" class="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[.03] text-zinc-400 transition hover:border-red-400/30 hover:text-white">
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-rule"></div>
+        <div class="flex flex-col justify-between gap-3 pt-5 text-[10px] text-zinc-600 sm:flex-row sm:items-center">
+          <span>© <span id="year"></span> Aagun Labs. Built with intent.</span>
+          <span>Independent studio · Product concepts are identified as concepts.</span>
         </div>
       </div>
-    </section>
+    </footer>
   </div>
 
   <script>
-    // Initialize icons safely
-    lucide.createIcons();
+    // Dynamic footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile navigation
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      mobileMenu.classList.toggle("hidden");
+      menuToggle.setAttribute("aria-label", isExpanded ? "Open navigation menu" : "Close navigation menu");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+      });
+    });
+
+    // Reveal sections as they enter the viewport
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach(item => revealObserver.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add("visible"));
+    }
+
+    // Subtle 3D tilt for desktop pointers
+    const supportsFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (supportsFinePointer && !reduceMotion) {
+      document.querySelectorAll("[data-tilt]").forEach(card => {
+        const maxTilt = Number(card.dataset.tiltMax || 4);
+
+        card.addEventListener("pointermove", event => {
+          const rect = card.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width;
+          const y = (event.clientY - rect.top) / rect.height;
+          const rotateY = (x - 0.5) * maxTilt * 2;
+          const rotateX = (0.5 - y) * maxTilt * 2;
+
+          card.style.transform =
+            `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+        });
+
+        card.addEventListener("pointerleave", () => {
+          card.style.transform = "";
+        });
+      });
+    }
+
+    // Small visual burst when primary actions are clicked
+    document.querySelectorAll(".btn-primary").forEach(button => {
+      button.addEventListener("click", event => {
+        if (reduceMotion) return;
+
+        const burst = document.createElement("span");
+        burst.className = "burst";
+
+        const x = event.clientX || window.innerWidth / 2;
+        const y = event.clientY || window.innerHeight / 2;
+
+        burst.style.left = `${x - 6}px`;
+        burst.style.top = `${y - 6}px`;
+
+        document.body.appendChild(burst);
+        window.setTimeout(() => burst.remove(), 500);
+      });
+    });
+
+    // Contact form: prepare a message in the visitor's default email client.
+    // No backend is configured, so this page does not store or transmit form data.
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("form-status");
+
+    contactForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) return;
+
+      const data = new FormData(contactForm);
+      const name = String(data.get("name") || "").trim();
+      const email = String(data.get("email") || "").trim();
+      const projectType = String(data.get("project-type") || "").trim();
+      const budget = String(data.get("budget") || "Not specified").trim();
+      const message = String(data.get("message") || "").trim();
+
+      const subject = `Aagun Labs project enquiry — ${projectType}`;
+      const body = [
+        "Hello Aagun Labs,",
+        "",
+        "I'd like to discuss a possible project.",
+        "",
+        `Name / Company: ${name}`,
+        `Email: ${email}`,
+        `Project direction: ${projectType}`,
+        `Scope: ${budget}`,
+        "",
+        "Problem / project details:",
+        message,
+        "",
+        "Sent through the Aagun Labs website."
+      ].join("\n");
+
+      const mailto = "mailto:safisalehbhuiyan2011@gmail.com"
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(body);
+
+      formStatus.textContent = "Your email application should open with the project details filled in. Review the message and send it from your email app.";
+      formStatus.classList.remove("hidden");
+
+      window.location.href = mailto;
+    });
   </script>
 </body>
 </html>
